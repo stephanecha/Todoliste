@@ -20,7 +20,7 @@ namespace HelloWord
             //L'éxecution de l'instruction ne se fera uniquement si l'on ajoute le ';' autrement impossible de passer la commande
 
             Console.WriteLine("Hello Blue World !");
-            Console.WriteLine("What can you tell me about Nature ?\n");
+            Console.WriteLine("What can you tell me about Nature ?\nIs it a blue world or a blue word ?\nNo, look at the blue Word in your windows screen ;-)...");
 
             //Console.ReadKey(*aucune surcharge de possible, cad ; aucune information ne opeut être inscrite ici, car on "recupère" des info, on ne les transmets pas)
             //Console.ReadKey();
