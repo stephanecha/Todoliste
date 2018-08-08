@@ -2,16 +2,16 @@
 Calculer la tva d'un produit ht et en donner son resultat.
 Demander à l'utilisateur d'introduire un montant hors tva, ainsi que son taux de tva
 
-le programme doit calculer ET afficher la TVA à payer en euros ET le montant total TVA.
+le programme doit calculer ET afficher la TVA à payer en euros ET le montant total TVA. ==>
 
 Ebauche du programme :
-             * Veuillez nous préciser le montant HT de votre produit ainsi que votre taux de Tva ? :
-             * HT
-             * Taux tva
-             * Récap de vos frais :
-             * taxe
-             * TtC
-             * Le montant total est de xx€ TTC
+             * Veuillez nous préciser le montant HT de votre produit ainsi que votre taux de Tva ? : >ok
+             * HT > ok
+             * Taux tva >ok
+             * Récap de vos frais : >ok
+             * taxe >ok
+             * TtC >ok
+             * Le montant total est de xx€ TTC >ok
 */
 using System;
 
@@ -48,7 +48,7 @@ namespace TVA
             Console.WriteLine(tauxTva);                     // Apres avoir passer en console le string tauxTva, on convertie ensuite la valeur de la variable taux en var Double
             var taux = Convert.ToDecimal(Console.ReadLine());
 
-            decimal Ttc = ht + (ht * taux / 100);            // Formule de calcul pour l'obtention du Ttc en memorisant la valeur double dans l'objet Ttc
+            var Ttc = ht + (ht * taux / 100);            // Formule de calcul pour l'obtention du Ttc en memorisant la valeur double dans l'objet Ttc
             var fTva = Ttc - ht;                             // Formule de calcul pour l'obtention du cout de la taxe
 
             Console.WriteLine(detailsOperation+ "\nTva : "+fTva+" euros"+"\nCout Ht : " + ht+" euros"); // On affiche le detail des operations
