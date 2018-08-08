@@ -36,27 +36,28 @@ namespace TVA
         static void Main(string[] args)
 
         {
-            string coutHt = "Veuillez préciser le montant Ht de votre produit";
-            string tauxTva = "\nLe taux de vôtre Tva local étant de";
-            string message = "\nLe montant Ttc de votre produit sera de ";
-            string detailOperation = "\nDétail de vos opérations :";
+            string coutHt = "Veuillez préciser le montant Ht de votre produit :";
+            string tauxTva = "\nVeuillez preciser vôtre taux de Tva local :";
+            string messageTtc = "\nLe montant Ttc de votre produit sera de ";
+            string detailsOperation = "\nDétail de vos opérations :";
+            string finOperation = "\nFin de votre opération, à bientôt !";
+            
+            Console.WriteLine(coutHt);                      // Apres avoir passer en console le string message, on convertie ensuite la valeur de la variable ht en var Double
+            var ht = Convert.ToDecimal(Console.ReadLine());
 
-            var c = 100;
-            double taxe = 20.6;
+            Console.WriteLine(tauxTva);                     // Apres avoir passer en console le string tauxTva, on convertie ensuite la valeur de la variable taux en var Double
+            var taux = Convert.ToDecimal(Console.ReadLine());
 
-            Console.WriteLine(coutHt);
-            var ht = Convert.ToDouble(Console.ReadLine());
+            decimal Ttc = ht + (ht * taux / 100);            // Formule de calcul pour l'obtention du Ttc en memorisant la valeur double dans l'objet Ttc
+            var fTva = Ttc - ht;                             // Formule de calcul pour l'obtention du cout de la taxe
 
-            Console.WriteLine(tauxTva+" "+taxe+" %");
+            Console.WriteLine(detailsOperation+ "\nTva : "+fTva+" euros"+"\nCout Ht : " + ht+" euros"); // On affiche le detail des operations
 
-            double prixTtc = (ht + (ht * taxe / c));
-            double fTva = prixTtc - ht;
+            Console.WriteLine(messageTtc + Ttc + " euros");                                             // On affiche le message avec les paramettres desirés pour indiquer le Ttc
 
-            Console.WriteLine(message+prixTtc+" euros");
 
-            Console.WriteLine(detailOperation+ "\nTva : "+fTva+" euros"+"\nCout Ht : " + ht+" euros");
-            Console.WriteLine("\nFin de l'opération, à bientôt.\n");
-
+            Console.WriteLine(finOperation+"\n\nVeuillez tapez sur la touche Entrée pour sortir du programme.");
+            Console.Read();
         }
 
     }
