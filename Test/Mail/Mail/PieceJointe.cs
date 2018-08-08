@@ -3,15 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
+//using System.IO; cf ligne 21 pour commentaire
 
 namespace Mail
-{
-    class PieceJointe
-    {
-        public string DateAjout , DateTime; // { get; set; };
 
-        public string FileInfo<Fichier>();
+{
+    public class PieceJointe
+
+    {
+        public Email Email { get; set; }
+
+        public DateTime DateAjout { get; set; }
+
+        public FileInfo Files { get; set; }
+
+    }
+
+    public class FileInfo //cette class n'est pas necessaire si l'on precise ce using System.IO
+    {
 
     }
 }

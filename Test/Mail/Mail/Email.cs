@@ -1,4 +1,4 @@
-﻿//Diag de classe UML, voir les acces et relations induites
+﻿//Diag de classe UML, voir les acces et relations
 /* 
  Ecrire la classe Email
  Ecrire la classe piece jointe (la classe FileInfo est une classe.Net dans l'espace de nom System.IO
@@ -22,21 +22,22 @@ using System.IO;
 namespace Mail
 
 {
-    public class Email
+    public static void Main(string[] args);
 
-    {
-        public string Sujet { get; set; }
+            public class Email
 
-        public string Destinataire { get; set; }
+        {
+            public string Sujet { get; set; }
 
-        public string [] DestinatairesEnCopie { get; set; }
+            public string Destinataire { get; set; }
 
-        public string Contenu { get; set; }
+            public string[] DestinatairesEnCopie { get; set; }
 
-        public List<PieceJointe> Email.PieceJointe { get; set; } //liste infini
+            public string Contenu { get; set; }
 
-//        public PieceJointe PieceJointe { get; set; } // pas de liste
+            //(cardinalité : 0...* ) signifit qu'il peut y avoir de 0 à x pj, possible, par email | la relation est precisé du côté email via un losange plein.
+            public List<PieceJointe> PieceJointe { get; set; }
 
-    }
+        }
 
 }
