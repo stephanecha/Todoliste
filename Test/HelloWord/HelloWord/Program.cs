@@ -14,13 +14,18 @@ namespace HelloWord
 {
     class Program
     {//la méthode Main est le point d'entré du programme, dans la class Program
+
         static void Main(string[] args)
         {
             //Console.WriteLine("les données à afficher dans la console sont écrites ici")
             //L'éxecution de l'instruction ne se fera uniquement si l'on ajoute le ';' autrement impossible de passer la commande
-
+           
             Console.WriteLine("Hello Blue World !");
             Console.WriteLine("What can you tell me about Nature ?\nIs it a blue world or a blue word ?\nNo, look at the blue Word in your windows screen ;-)...");
+            Console.WriteLine("Veuillez appuyer sur une touche de votre clavier pour sortir du mode console");
+            Console.ReadKey();
+           
+            
 
             //Console.ReadKey(*aucune surcharge de possible, cad ; aucune information ne opeut être inscrite ici, car on "recupère" des info, on ne les transmets pas)
             //Console.ReadKey();
