@@ -1,5 +1,8 @@
 ﻿//Diag de classe UML, voir les acces et relations induites
-
+/* 
+ Ecrire la classe Email
+ Ecrire la cla piece jointe (la classe FileInfo est une classe.Net dans l'espace de nom System.IO
+ */
 
 
 using System;
