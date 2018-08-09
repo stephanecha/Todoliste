@@ -22,7 +22,7 @@ using System.IO;
 namespace Mail
 
 {
-    public static void Main(string[] args);
+    private Main (String[] args);
 
             public class Email
 

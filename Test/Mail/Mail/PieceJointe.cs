@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using System.IO; cf ligne 21 pour commentaire
+using System.IO;
 
 namespace Mail
 
@@ -15,12 +15,12 @@ namespace Mail
 
         public DateTime DateAjout { get; set; }
 
-        public FileInfo Files { get; set; }
+        public List<FileInfo> Files { get; set; }
 
     }
 
-    public class FileInfo //cette class n'est pas necessaire si l'on precise ce using System.IO
+    public class FileInfo //cette class n'est pas sasns doute pas necessaire si l'on precise ce "using System.IO"
     {
-
+        public FileInfo File;
     }
 }
