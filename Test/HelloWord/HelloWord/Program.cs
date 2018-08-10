@@ -29,7 +29,7 @@ namespace HelloWord
             //Console.ReadKey();
 
             //Console.ReadLine(*récupérè et affiche la ligne de caractères tapée au clavié par l'utilisateur, dans la console -même remarque que po) 
-            //Console.ReadLine();
+            //Console.ReadLine();f
 
             // le merge à fonctionné dans le sens Iteration 2 au master
 
