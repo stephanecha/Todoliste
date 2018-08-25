@@ -8,6 +8,11 @@ using System.IO;
 namespace Mail
 
 {
+    static void Main(string[] args)
+    {
+        Mail + 1 = new PieceJointe; 
+    }
+
     public class PieceJointe
 
     {
@@ -18,9 +23,17 @@ namespace Mail
         public List<FileInfo> Files { get; set; }
 
     }
-
-    public class FileInfo //cette class n'est pas sasns doute pas necessaire si l'on precise ce "using System.IO"
+    public class Email
     {
-        public FileInfo File;
+
     }
+    public class DateTime
+    {
+
+    }
+    public class Files
+    {
+
+    }
+
 }

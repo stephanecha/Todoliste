@@ -25,7 +25,7 @@ namespace HelloWord
             Console.WriteLine("Veuillez appuyer sur une touche de votre clavier pour sortir du mode console");
             Console.ReadKey();
 
-            //Console.ReadKey(*aucune surcharge de possible, cad ; aucune information ne opeut être inscrite ici, car on "recupère" des info, on ne les transmets pas)
+            //Console.ReadKey(*aucune surcharge de possible, cad ; aucune information ne peut être inscrite ici, car on "recupère" des info, on ne les transmets pas)
             //Console.ReadKey();
 
             //Console.ReadLine(*récupérè et affiche la ligne de caractères tapée au clavié par l'utilisateur, dans la console -même remarque que po) 
