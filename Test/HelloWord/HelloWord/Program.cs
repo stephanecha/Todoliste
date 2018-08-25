@@ -13,23 +13,43 @@ using System.Threading.Tasks;
 namespace HelloWord
 {
     class Program
-    {//la méthode Main est le point d'entré du programme, dans la class Program
-
+    {
         static void Main(string[] args)
         {
-            //Console.WriteLine("les données à afficher dans la console sont écrites ici")
-            //L'éxecution de l'instruction ne se fera uniquement si l'on ajoute le ';' autrement impossible de passer la commande
-           
-            Console.WriteLine("Hello Blue World !");
-            Console.WriteLine("What can you tell me about Nature ?\nIs it a blue world or a blue word ?\nNo, look at the blue Word in your windows screen ;-)...");
-            Console.WriteLine("Veuillez appuyer sur une touche de votre clavier pour sortir du mode console");
-            Console.ReadKey();
 
-            //Console.ReadKey(*aucune surcharge de possible, cad ; aucune information ne peut être inscrite ici, car on "recupère" des info, on ne les transmets pas)
-            //Console.ReadKey();
+            Console.WriteLine("\nWhat is your name ?");
+            var name = Console.ReadLine();
+            var date = DateTime.Now;
 
-            //Console.ReadLine(*récupérè et affiche la ligne de caractères tapée au clavié par l'utilisateur, dans la console -même remarque que po) 
-            //Console.ReadLine();f
+            Console.WriteLine("\nQue cherches tu ?");
+            var chercher = Console.ReadLine();
+
+            Console.WriteLine("\nVraiment ?");
+            Console.ReadLine();
+
+            Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t} tu cherches {chercher}!");
+
+            string yBoss = "Hey Jhonny";
+            string unBadasse = "Ok Badasse";
+            yBoss = yBoss.Replace("Hey", "La vache");
+            yBoss = yBoss.Remove(0);
+
+            Console.WriteLine($"{yBoss}, wait wait wait just a check, {unBadasse}");
+            int Verre = 0;
+            while (Verre < 10)
+            {
+                Console.WriteLine($"Je te fabrique, {Verre}, verres. ");
+                Verre++;
+            }
+ //           int Verre = 0;
+            do
+            {
+                Console.WriteLine($"combien en reste t il? {Verre}");
+                Verre--;
+            } while (Verre<20)
+
+            Console.WriteLine("\nPress any key to exit...");
+            Console.ReadKey(true);
 
             // le merge à fonctionné dans le sens Iteration 2 au master
 
