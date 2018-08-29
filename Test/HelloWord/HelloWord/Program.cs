@@ -32,13 +32,20 @@ namespace HelloWord
                 var mdp = Console.ReadLine();
                 if (mdp == "UserCom")//liste de mdp egalement...
                 {
-                    Console.WriteLine($"\n\n\beepQue souhaitez vous réaliser aujourd'hui {name}?");
-                    Console.WriteLine("1. Visualiser :"); // faire une liste de consultation de client et de voyage en mode sql
-                    Console.WriteLine("2. Dénicher :"); // idem ci dessus liste de voyage en dispo avec liste de client acheteur
-                    Console.WriteLine("3. Prospecter :"); // liste client potentiel et voyage dispo avec promo enfant 12 ans et liste tranche d'age etc via sql ?
-                    Console.WriteLine("Q : Revenir un peux plus tard finalement...");
+                    Console.Beep(52, 33);
+
+                    Console.WriteLine($"\n\nQue souhaitez vous réaliser aujourd'hui {name}?\n");
+                    Console.WriteLine("1. Visualiser : 1 ???"); // faire une liste de consultation de client et de voyage en mode sql
+                    Console.WriteLine("2. Dénicher   : 2 !!!"); // idem ci dessus liste de voyage en dispo avec liste de client acheteur
+                    Console.WriteLine("3. Prospecter : 3 ..."); // liste client potentiel et voyage dispo avec promo enfant 12 ans et liste tranche d'age etc via sql ?
+                    Console.WriteLine("");
+                    Console.WriteLine("");
+                    Console.WriteLine("");
+
+                    Console.WriteLine(".qQ : Revenir un peux plus tard finalement... : Qq..");
                 }
                 Console.ReadKey();
+                var choix =  
             }
         }
     }
