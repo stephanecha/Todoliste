@@ -6,6 +6,7 @@ Utilisation des Methodes ;
 
 using System;
 using System.Collections.Generic;
+using System.IO
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,15 +17,18 @@ namespace HelloWord
     {
         static void Main(string[] args)
         {
-
             Console.WriteLine("\nVotre identifiant qui est votre prenom, je vous pries");
             var name = Console.ReadLine();
             var date = DateTime.Now;
 
             if (name != "Alex")//une liste de commercial par exemple
             {
-                Console.WriteLine("\n\aVous n'avez pas acces, désolé !");
-                Console.ReadKey();
+                string administrateur = ("gtm@gmail.com");
+
+                {
+                    Console.WriteLine($"\n\aVous n'êtes pas autoriser à acceder à notre site, veuillez vous rapprocher de votre administrateur, {administrateur} désolé !");
+                    Console.ReadKey();
+                }
             }
             else
             {
@@ -40,12 +44,30 @@ namespace HelloWord
                     Console.WriteLine("3. Prospecter : 3 ..."); // liste client potentiel et voyage dispo avec promo enfant 12 ans et liste tranche d'age etc via sql ?
                     Console.WriteLine("");
                     Console.WriteLine("");
-                    Console.WriteLine("");
 
                     Console.WriteLine(".qQ : Revenir un peux plus tard finalement... : Qq..");
+                    Console.ReadLine();
+                    //List<ListedesPets>
+                    switch (Console.ReadLine())
+                    {
+                        case "1":
+                            Console.WriteLine("choix1");
+                            break;
+                        case "2":
+                            Console.WriteLine("choix2");
+                            break;
+                        case "3":
+                            Console.WriteLine("choix3");
+                            break;
+                        case "Q":
+                            Console.WriteLine("\nEn souhaitant vous revoir très prochainement, à tres bientôt !");
+                            break;
+                        default:
+                            Console.WriteLine("\nEn souhaitant vous revoir très prochainement, à tres bientôt !");
+                            break;
+                    }
+
                 }
-                Console.ReadKey();
-                var choix =  
             }
         }
     }
