@@ -6,8 +6,8 @@ Utilisation des Methodes ;
 
 using System;
 using System.Collections.Generic;
-using System.IO
-using System.Linq;
+using System.IO;
+//using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -39,26 +39,26 @@ namespace HelloWord
                     Console.Beep(52, 33);
 
                     Console.WriteLine($"\n\nQue souhaitez vous réaliser aujourd'hui {name}?\n");
-                    Console.WriteLine("1. Visualiser : 1 ???"); // faire une liste de consultation de client et de voyage en mode sql
-                    Console.WriteLine("2. Dénicher   : 2 !!!"); // idem ci dessus liste de voyage en dispo avec liste de client acheteur
-                    Console.WriteLine("3. Prospecter : 3 ..."); // liste client potentiel et voyage dispo avec promo enfant 12 ans et liste tranche d'age etc via sql ?
+                    Console.WriteLine("1 . Visualiser : 1"); // faire une liste de consultation de client et de voyage en mode sql
+                    Console.WriteLine("2 . Dénicher   : 2"); // idem ci dessus liste de voyage en dispo avec liste de client acheteur
+                    Console.WriteLine("3 . Prospecter : 3"); // liste client potentiel et voyage dispo avec promo enfant 12 ans et liste tranche d'age etc via sql ?
                     Console.WriteLine("");
                     Console.WriteLine("");
 
                     Console.WriteLine(".qQ : Revenir un peux plus tard finalement... : Qq..");
-                    Console.ReadLine();
-                    //List<ListedesPets>
-                    switch (Console.ReadLine())
+                    var choixMenu = Console.ReadLine();
+                    switch (choixMenu)
                     {
                         case "1":
-                            Console.WriteLine("choix1");
+                            Console.WriteLine("Aller qu'est ce qu'il y a dans cette armoire...");
                             break;
                         case "2":
-                            Console.WriteLine("choix2");
+                            Console.WriteLine("Dennicher de bonnes affaire ? Oui tout de suite.");
                             break;
                         case "3":
-                            Console.WriteLine("choix3");
+                            Console.WriteLine("Allons pêcher ça faisait un que ça me trote dans la tete .!");
                             break;
+                        case "q":
                         case "Q":
                             Console.WriteLine("\nEn souhaitant vous revoir très prochainement, à tres bientôt !");
                             break;
@@ -72,34 +72,3 @@ namespace HelloWord
         }
     }
 }
-//            Console.ReadLine();
-
-//            Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t} tu cherches {chercher}!");
-
-//            string yBoss = "Hey Jhonny";
-//            string unBadasse = "Ok Badasse";
-//            yBoss = yBoss.Replace("Hey", "La vache");
-//            yBoss = yBoss.Remove(0);
-
-//            Console.WriteLine($"{yBoss}, wait wait wait just a check, {unBadasse}");
-//            int Verre = 0;
-//            while (Verre < 10)
-//            {
-//                Console.WriteLine($"Je te fabrique, {Verre}, verres. ");
-//                Verre++;
-//            }
-// //           int Verre = 0;
-//            do
-//            {
-//                Console.WriteLine($"combien en reste t il? {Verre}");
-//                Verre--;
-//            } while (Verre<20)
-
-//            Console.WriteLine("\nPress any key to exit...");
-//            Console.ReadKey(true);
-
-//            // le merge à fonctionné dans le sens Iteration 2 au master
-
-//        }
-//    }
-//}
