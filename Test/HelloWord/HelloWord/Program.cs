@@ -18,14 +18,14 @@ namespace HelloWord
         static void Main(string[] args)
         {
             var date = DateTime.Now;
-            var users = new List<string> { "<user>", "Ana", "Felipe", "Alex" };
-            var clees = new List<string> { "<clee>", "root", "toor", "UserCom" };
+            var users = new List<string> { "Alex", "Ana", "Felipe"};
+            var clees = new List<string> { "root", "toor", "UserCom" };
             string administrateur = "gtm@gmail.com";
 
             Console.WriteLine($"\nVotre identifiant qui est votre prenom, je vous pries {date}");
-            var presentation = Console.ReadLine();
+            string presentation = Console.ReadLine();
 
-            foreach (var user in users)
+            foreach (string user in users)
                 if (presentation != user)
                 {
                     Console.WriteLine($"\n\aVous n'êtes pas autoriser à acceder à notre site, veuillez vous rapprocher de votre administrateur, {administrateur}! {date}");
@@ -34,10 +34,12 @@ namespace HelloWord
                 else
                 {
                     Console.Beep(3000, 900);
-                    Console.WriteLine($"\nBienvenu {presentation}, veuillez entrez votre mot de passe {date}");
-                    var mdp = Console.ReadLine();
+                    Console.WriteLine("\nBienvenu {presentation}, veuillez entrez votre mot de passe");
+                    Console.WriteLine("");
+                    Console.WriteLine("{date}");
+                    string mdp = Console.ReadLine();
 
-                    foreach (var clee in clees)
+                    foreach (string clee in clees)
                         if (mdp == clee)
                         {
                             Console.WriteLine($"\n\nQue souhaitez vous réaliser aujourd'hui {presentation}?");
