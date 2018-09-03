@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace HelloWord
 {
-    class menuVisualiser
+    class LeVoyage
     {
+        LeVoyage = new Voyage;
+    }
+    public class Voyage
+    {
+
     }
 }
