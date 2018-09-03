@@ -18,30 +18,40 @@ namespace HelloWord
         static void Main(string[] args)
         {
             var date = DateTime.Now;
-            var users = new List<string> { "Alex", "Ana", "Felipe"};
-            var clees = new List<string> { "root", "toor", "UserCom" };
             string administrateur = "gtm@gmail.com";
+            Console.WriteLine($"\n{date}\nVotre identifiant qui est votre prenom, je vous pries :");
+            var presentation = Console.ReadLine();
+            var users = new List<string> { "Alex", "Ana", "Felipe"};
 
-            Console.WriteLine($"\nVotre identifiant qui est votre prenom, je vous pries {date}");
-            string presentation = Console.ReadLine();
-
-            foreach (string user in users)
+            foreach (var user in users)
+                
                 if (presentation != user)
                 {
-                    Console.WriteLine($"\n\aVous n'êtes pas autoriser à acceder à notre site, veuillez vous rapprocher de votre administrateur, {administrateur}! {date}");
+                    Console.Clear();
+
+                    Console.WriteLine($"\n\aVous n'êtes pas autoriser à acceder à ce site, veuillez vous prendre contact avec notre administrateur, {administrateur}!");
+                    Console.WriteLine("");
+                    Console.WriteLine("");
+                    Console.WriteLine($"\n{date}");
                     Console.ReadKey();
                 }
                 else
                 {
-                    Console.Beep(3000, 900);
-                    Console.WriteLine("\nBienvenu {presentation}, veuillez entrez votre mot de passe");
-                    Console.WriteLine("");
-                    Console.WriteLine("{date}");
-                    string mdp = Console.ReadLine();
 
-                    foreach (string clee in clees)
-                        if (mdp == clee)
+                    Console.Clear();
+                    Console.Beep(3000, 90);
+                    Console.Beep(3900, 90);
+                    Console.Beep(4100, 190);
+
+                    Console.WriteLine($"\nBienvenu {presentation}, veuillez entrez votre mot de passe {date}");
+                    string mdp = Console.ReadLine();
+                    var clees = new List<string> { "root", "toor", "UserCom" };
+
+                    foreach (var clee in clees)
+                        if (mdp != clee)
                         {
+                            Console.Clear();
+
                             Console.WriteLine($"\n\nQue souhaitez vous réaliser aujourd'hui {presentation}?");
                             Console.WriteLine("1 . Visualiser : 1"); // faire une liste de consultation de client et de voyage en mode sql
                             Console.WriteLine("2 . Dénicher   : 2"); // idem ci dessus liste de voyage en dispo avec liste de client acheteur
@@ -49,6 +59,9 @@ namespace HelloWord
                             Console.WriteLine("");
                             Console.WriteLine("");
                             Console.WriteLine(".qQ : Revenir un peux plus tard finalement... : Qq..");
+                            Console.WriteLine("");
+                            Console.WriteLine("");
+
                             var choixMenu = Console.ReadLine();
                             switch (choixMenu)
                             {
@@ -66,7 +79,10 @@ namespace HelloWord
                                 case "q":
                                 case "Q":
                                 default:
-                                    Console.WriteLine($"\nEn souhaitant vous revoir très prochainement, à tres bientôt ! {date}");
+                                    Console.WriteLine($"\nEn souhaitant vous revoir très prochainement, à tres bientôt !");
+                                    Console.WriteLine("");
+                                    Console.WriteLine("");
+                                    Console.WriteLine($"\n{date}");
                                     break;
                             }
                         }
