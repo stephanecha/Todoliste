@@ -21,9 +21,11 @@ namespace HelloWord
             string administrateur = "gtm@gmail.com";
             Console.WriteLine($"\n{date}\nVotre identifiant qui est votre prenom, je vous pries :");
             var presentation = Console.ReadLine();
-            var users = new List<string> { "Alex", "Ana", "Felipe"};
+            List<string> users = new List<string> { "Alex", "Ana", "Felipe"};
+            //(string, bool) quitter = (Console.ReadLine(), "q" is "Q");
+            bool quitter = "q" is "Q";
 
-            foreach (var user in users)
+            foreach (string user in users)
                 
                 if (presentation != user)
                 {
@@ -62,22 +64,22 @@ namespace HelloWord
                             Console.WriteLine("");
                             Console.WriteLine("");
 
-                            var choixMenu = Console.ReadLine();
+                            int choixMenu = Console.Read();
                             switch (choixMenu)
                             {
-                                case "1":
+                                case 1:
                                     Console.WriteLine("\nAller qu'est ce qu'il y a dans cette armoire...");
-                                    new menuVisualiser();
+                                    new LeVoyage();
 
                                     break;
-                                case "2":
+                                case 2:
                                     Console.WriteLine("\nDennicher de bonnes affaire ? Oui tout de suite.");
                                     break;
-                                case "3":
+                                case 3:
                                     Console.WriteLine("\nAllons pêcher ça faisait un que ça me trote dans la tete .!");
                                     break;
-                                case "q":
-                                case "Q":
+                                case 4 when quitter:
+
                                 default:
                                     Console.WriteLine($"\nEn souhaitant vous revoir très prochainement, à tres bientôt !");
                                     Console.WriteLine("");

@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace HelloWord
 {
     class LeVoyage
-    {
-        LeVoyage = new Voyage;
+     {
+        new Voyage
     }
     public class Voyage
     {
