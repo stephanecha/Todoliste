@@ -69,7 +69,10 @@ namespace HelloWord
                             {
                                 case 1:
                                     Console.WriteLine("\nAller qu'est ce qu'il y a dans cette armoire...");
-                                    new LeVoyage();
+									//new LeVoyage();
+									Voyage.menu(); // attention au "static" dans la methode, menu.
+									/* var monobjet = new Voyage(); // instancier "minobjet" pour la creation */
+
 
                                     break;
                                 case 2:
