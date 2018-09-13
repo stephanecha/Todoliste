@@ -5,10 +5,9 @@ using System.Web;
 
 namespace Todolist.Models
 {
-	public class Tache
+	public class categorie
 	{
 		public int ID { get; set; }
 		public string Nom { get; set; }
-		public string Description { get; set; }
 	}
 }
