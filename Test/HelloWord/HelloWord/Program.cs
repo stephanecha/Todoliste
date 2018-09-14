@@ -23,10 +23,10 @@ namespace HelloWord
             var presentation = Console.ReadLine();
             List<string> users = new List<string> { "Alex", "Ana", "Felipe"};
             //(string, bool) quitter = (Console.ReadLine(), "q" is "Q");
-            bool quitter = "q" is "Q";
 
-            foreach (string user in users)
-                
+            for (int i = 0; i < users.Count; i++)
+            {
+                string user = users[i];
                 if (presentation != user)
                 {
                     Console.Clear();
@@ -47,10 +47,10 @@ namespace HelloWord
 
                     Console.WriteLine($"\nBienvenu {presentation}, veuillez entrez votre mot de passe {date}");
                     string mdp = Console.ReadLine();
-                    var clees = new List<string> { "root", "toor", "UserCom" };
+                    List<string> clees = new List<string> { "root", "toor", "UserCom" };
 
-                    foreach (var clee in clees)
-                        if (mdp != clee)
+                    foreach (string clee in clees)
+                        if (mdp == clee)
                         {
                             Console.Clear();
 
@@ -60,7 +60,7 @@ namespace HelloWord
                             Console.WriteLine("3 . Prospecter : 3"); // liste client potentiel et voyage dispo avec promo enfant 12 ans et liste tranche d'age etc via sql ?
                             Console.WriteLine("");
                             Console.WriteLine("");
-                            Console.WriteLine(".qQ : Revenir un peux plus tard finalement... : Qq..");
+                            Console.WriteLine("q . : Revenir un peux plus tard finalement... : q");
                             Console.WriteLine("");
                             Console.WriteLine("");
 
@@ -69,8 +69,7 @@ namespace HelloWord
                             {
                                 case 1:
                                     Console.WriteLine("\nAller qu'est ce qu'il y a dans cette armoire...");
-                                    new LeVoyage();
-
+                                    new MenuVisualiser();
                                     break;
                                 case 2:
                                     Console.WriteLine("\nDennicher de bonnes affaire ? Oui tout de suite.");
@@ -78,10 +77,10 @@ namespace HelloWord
                                 case 3:
                                     Console.WriteLine("\nAllons pêcher ça faisait un que ça me trote dans la tete .!");
                                     break;
-                                case 4 when quitter:
-
-                                default:
+                                case 'q':
                                     Console.WriteLine($"\nEn souhaitant vous revoir très prochainement, à tres bientôt !");
+                                    break;
+                                default:
                                     Console.WriteLine("");
                                     Console.WriteLine("");
                                     Console.WriteLine($"\n{date}");
@@ -89,6 +88,7 @@ namespace HelloWord
                             }
                         }
                 }
+            }
         }
     }
 }
