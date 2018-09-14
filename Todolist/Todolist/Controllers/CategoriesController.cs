@@ -14,12 +14,19 @@ namespace Todolist.Controllers
 	{
 		private TodoDbContext db = new TodoDbContext();
 
-		public IQueryable<categorie> GetCategories()
+		public IQueryable<Categorie> GetCategories()
 		{
 			return db.Categories;
 
 		}
 
+		public IHttpActionResult PostCategories(Categorie categorie)
+		{
+			db.Categories.Add(categorie);
+			db.SaveChanges();
+
+			return Ok(categorie);
+		}
 		protected override void Dispose(bool disposing)
 		{
 			base.Dispose(disposing);

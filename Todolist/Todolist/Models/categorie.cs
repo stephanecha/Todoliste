@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Todolist.Models
 {
-	public class categorie
+	public class Categorie
 	{
 
 		public int ID { get; set; }
